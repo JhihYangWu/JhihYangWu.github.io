@@ -1,1 +1,81 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JhihYang Wu's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-name">JHIHYANG WU</div>
+            <div id="header-nav">
+                <span onclick="switchPage(this)" data-page="home" class="clickable">HOME</span>
+                <span onclick="switchPage(this)" data-page="projects" class="clickable">PROJECTS</span>
+                <span onclick="switchPage(this)" data-page="contact" class="clickable">CONTACT</span>
+            </div>
+        </div>
+        <div id="home">
+            <div id="home-center">
+                <img id="profile-picture" src="images/Profile Picture.jpg">
+                <div id="profile-quote">"computer science is serious business"</div>
+                <div id="profile-description">Hi! My name is JhihYang Wu and I am a sophomore at the University of Arizona studying Computer Science and Electrical & Computer Engineering. I was born in Taiwan, grew up in Shanghai, and currently living in the US. I am really interested in anything related to artificial intelligence and hope to one day contribute to the Big AI Dream of building robots as smart as humans. In my free time I like to watch tech YouTube videos, build projects, and play CS:GO. I love making friends so feel free to contact me about anything!</div>
+                <div id="profile-links">
+                    <a href="https://www.linkedin.com/in/jhihyang-wu/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/JhihYangWu" target="_blank">GitHub</a>
+                    <a href="Resume.pdf" target="_blank">Resume</a>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">Crypto Trading Bot</div>
+                    <div class="project-description">From April 2022 to August 2022, I developed a trading bot that makes trades between BTC and USDT on the Binance Exchange with hopes of making profits. Instead of using existing trading algorithms such as the Grid Trading Strategy, I invented my own using neural networks and a custom loss function. After training my algorithm on 8 months of Bitcoin price data, I backtested my algorithm on 30 days of unseen data and got 44.39% profit when the price of Bitcoin only went up by 14.64%. Unfortunately, my algorithm did not perform well after those 30 days so I was not able to become rich. I hope to continue working on this project when I have more time.</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('crypto', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('crypto', true)">&#10095;</div>
+                    <img class="project-pictures" id="crypto-picture">
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">Arizona Autonomous</div>
+                    <div class="project-description">After coming to the University of Arizona for a few weeks, I joined a club called Arizona Autonomous which builds and programs UAVs (unmanned aerial vehicles) to compete in the annual SUAS Competition. I joined the Computer Vision Team and was tasked to make software that could detect and classify letters/shapes on the ground from photos taken by a camera mounted under our UAV. We decided to go with a machine learning approach so we created a Unity project to simulate images we expected to see at the competition. We then implemented the YOLO: Real-Time Object Detection algorithm from scratch in Keras and trained it to draw bounding boxes around the letters/shapes given Canny edge detection filtered images. We then trained a ton of convolution neural networks to classify the attributes of the objects inside those bounding boxes.<br><br><a href="https://www.instagram.com/azautonomous/" target="_blank">Instagram</a><br><a href="https://github.com/JhihYangWu/AzA-Computer-Vision" target="_blank">2021 - 2022 Source Code</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('aza', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('aza', true)">&#10095;</div>
+                    <img class="project-pictures" id="aza-picture">
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">BookTank</div>
+                    <div class="project-description">In my junior year of high school at the SMIC Private School in Shanghai, I worked with 2 of my classmates and built a full blown WeChat Mini Program for students and parents to buy and sell school textbooks more effectively. In the mini program, you could see what others have listed for sale and contact the seller with a push of a button. You could also upload pictures of your own books for sale on the platform. We even built a messaging system inside our mini program using WebSockets. As of September 2022, we have attracted more than 1900 users and have more than 1100 book listings of which more than 600 are successful transactions. One of the things that I am most proud of about this project is saving students who needed a textbook really urgenty for class but couldn’t find it anywhere else.<br><br><a href="images/BookTank QR Code.png" target="_blank">WeChat QR Code</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('booktank', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('booktank', true)">&#10095;</div>
+                    <img class="project-pictures" id="booktank-picture">
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div id="contact-center">
+                <form id="contact-form" onsubmit="return submitMessage()">
+                    <div id="contact-title">CONTACT</div>
+                    <input type="text" placeholder="NAME" id="contact-form-name" spellcheck="false">
+                    <input type="email" placeholder="EMAIL" id="contact-form-email">
+                    <textarea placeholder="MESSAGE" id="contact-form-message" required></textarea>
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+            <div id="contact-email">or email me at jhihyang_wu@outlook.com</div>
+        </div>
+        <div id="loader-overlay">
+            <div id="loader"></div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
