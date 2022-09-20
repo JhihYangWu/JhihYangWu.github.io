@@ -142,7 +142,7 @@ form :not(:last-child){
 }
 
 .project-description{
-    overflow: scroll;
+    overflow-y: scroll;
     height: calc(100% - 150px);
 }
 
