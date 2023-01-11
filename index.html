@@ -28,6 +28,17 @@
         <div id="projects">
             <div class="project">
                 <div class="project-left">
+                    <div class="project-name">Arizona Autonomous</div>
+                    <div class="project-description">After coming to the University of Arizona for a few weeks, I joined a club called Arizona Autonomous which builds and programs UAVs (unmanned aerial vehicles) to compete in the annual SUAS Competition. I joined the Computer Vision Team and was tasked to make software that could detect and classify letters/shapes on the ground from photos taken by a camera mounted under our UAV. We decided to go with a machine learning approach so we created a Unity project to simulate images we expected to see at the competition. We then implemented the YOLO: Real-Time Object Detection algorithm from scratch in Keras and trained it to draw bounding boxes around the letters/shapes given Canny edge detection filtered images. We then trained a ton of convolution neural networks to classify the attributes of the objects inside those bounding boxes. Since multiple teams compete in the sky at the same time, we needed to create an object avoidance system. To do this, we are currently experimenting with stereo vision and constructing a 3D vector space around our drone in real time.<br><br><a href="https://www.instagram.com/azautonomous/" target="_blank">Instagram</a><br><a href="https://github.com/JhihYangWu/AzA-Computer-Vision-2022" target="_blank">2021 - 2022 Source Code</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('aza', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('aza', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="aza-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
                     <div class="project-name">Crypto Trading Bot</div>
                     <div class="project-description">From April 2022 to August 2022, I developed a trading bot that makes trades between BTC and USDT on the Binance Exchange with hopes of making profits. Instead of using existing trading algorithms such as the Grid Trading Strategy, I invented my own using neural networks and a custom loss function. After training my algorithm on 8 months of Bitcoin price data, I backtested my algorithm on 30 days of unseen data and got 44.39% profit when the price of Bitcoin only went up by 14.64%. Unfortunately, my algorithm did not perform well after those 30 days so I was not able to become rich. I hope to continue working on this project when I have more time.</div>
                 </div>
@@ -35,17 +46,6 @@
                     <div class="project-left-arrow clickable" onclick="switchImage('crypto', false)">&#10094;</div>
                     <div class="project-right-arrow clickable" onclick="switchImage('crypto', true)">&#10095;</div>
                     <div class="project-vertical-align"><img class="project-pictures" id="crypto-picture"></div>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-left">
-                    <div class="project-name">Arizona Autonomous</div>
-                    <div class="project-description">After coming to the University of Arizona for a few weeks, I joined a club called Arizona Autonomous which builds and programs UAVs (unmanned aerial vehicles) to compete in the annual SUAS Competition. I joined the Computer Vision Team and was tasked to make software that could detect and classify letters/shapes on the ground from photos taken by a camera mounted under our UAV. We decided to go with a machine learning approach so we created a Unity project to simulate images we expected to see at the competition. We then implemented the YOLO: Real-Time Object Detection algorithm from scratch in Keras and trained it to draw bounding boxes around the letters/shapes given Canny edge detection filtered images. We then trained a ton of convolution neural networks to classify the attributes of the objects inside those bounding boxes.<br><br><a href="https://www.instagram.com/azautonomous/" target="_blank">Instagram</a><br><a href="https://github.com/JhihYangWu/AzA-Computer-Vision-2022" target="_blank">2021 - 2022 Source Code</a></div>
-                </div>
-                <div class="project-right">
-                    <div class="project-left-arrow clickable" onclick="switchImage('aza', false)">&#10094;</div>
-                    <div class="project-right-arrow clickable" onclick="switchImage('aza', true)">&#10095;</div>
-                    <div class="project-vertical-align"><img class="project-pictures" id="aza-picture"></div>
                 </div>
             </div>
             <div class="project">
