@@ -39,14 +39,17 @@ function switchPage(e) {
 let numCryptoImages = 2
 let numAZAImages = 10
 let numBookTankImages = 6
+let numMinigradImages = 4
 
 let cryptoPictureIndex = 1
 let azaPictureIndex = 1
 let booktankPictureIndex = 1
+let minigradPictureIndex = 1
 
 $("crypto-picture").src = "images/crypto/1.png"
 $("aza-picture").src = "images/aza/1.png"
 $("booktank-picture").src = "images/booktank/1.png"
+$("minigrad-picture").src = "images/minigrad/1.png"
 
 function switchImage(project, right) {
     if (project == "crypto") {
@@ -85,6 +88,18 @@ function switchImage(project, right) {
             booktankPictureIndex = numBookTankImages
         }
         $("booktank-picture").src = `images/booktank/${booktankPictureIndex}.png`
+    } else if (project == "minigrad") {
+        if (right) {
+            minigradPictureIndex++
+        } else {
+            minigradPictureIndex--
+        }
+        if (minigradPictureIndex > numMinigradImages) {
+            minigradPictureIndex = 1
+        } else if (minigradPictureIndex < 1) {
+            minigradPictureIndex = numMinigradImages
+        }
+        $("minigrad-picture").src = `images/minigrad/${minigradPictureIndex}.png`
     }
 }
 
