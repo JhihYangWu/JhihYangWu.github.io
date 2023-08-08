@@ -40,16 +40,19 @@ let numCryptoImages = 2
 let numAZAImages = 10
 let numBookTankImages = 6
 let numMinigradImages = 4
+let numControllerImages = 11
 
 let cryptoPictureIndex = 1
 let azaPictureIndex = 1
 let booktankPictureIndex = 1
 let minigradPictureIndex = 1
+let controllerPictureIndex = 1
 
 $("crypto-picture").src = "images/crypto/1.png"
 $("aza-picture").src = "images/aza/1.png"
 $("booktank-picture").src = "images/booktank/1.png"
 $("minigrad-picture").src = "images/minigrad/1.png"
+$("controller-picture").src = "images/controller/1.png"
 
 function switchImage(project, right) {
     if (project == "crypto") {
@@ -100,6 +103,18 @@ function switchImage(project, right) {
             minigradPictureIndex = numMinigradImages
         }
         $("minigrad-picture").src = `images/minigrad/${minigradPictureIndex}.png`
+    } else if (project == "controller") {
+        if (right) {
+            controllerPictureIndex++
+        } else {
+            controllerPictureIndex--
+        }
+        if (controllerPictureIndex > numControllerImages) {
+            controllerPictureIndex = 1
+        } else if (controllerPictureIndex < 1) {
+            controllerPictureIndex = numControllerImages
+        }
+        $("controller-picture").src = `images/controller/${controllerPictureIndex}.png`
     }
 }
 
