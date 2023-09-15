@@ -160,3 +160,8 @@ function submitMessage() {
     }, 500)
     return false
 }
+
+function clickProjects() {
+    $("header-nav").childNodes[3].click()
+}
+
