@@ -165,3 +165,7 @@ function clickProjects() {
     $("header-nav").childNodes[3].click()
 }
 
+if (window.location.href.endsWith("#projects")) {
+    clickProjects()
+}
+
