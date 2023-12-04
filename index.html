@@ -29,17 +29,6 @@
         <div id="projects">
             <div class="project">
                 <div class="project-left">
-                    <div class="project-name">armCPUonFPGA</div>
-                    <div class="project-description">With the recent boom in generative AI and hardware acceleration, I became really interested in how chips are built. In armCPUonFPGA, I implement a 32-bit single-cycle ARMv4 CPU using the hardware description language Verilog and use it to program my FPGA (Tul Pynq-Z2). I wanted to understand how each component (carry lookahead adder, ALU, multiplier, MUX, etc) works in real life so I limited myself to only using logic gates and building up from there. I would love to turn my code into an actual chip and get it manufactured at a fab such as TSMC but since I don't have the money or knowledge, the only way to turn my code into hardware is using FPGA. This project combines the knowledge I learned in my computer architecture class and digital logic class while also giving me the chance to learn a more popular computer architecture. Check out my GitHub for more information about this project. (I wrote a super long README!)<br><br><a href="https://github.com/JhihYangWu/armCPUonFPGA" target="_blank">GitHub Repository</a></div>
-                </div>
-                <div class="project-right">
-                    <div class="project-left-arrow clickable" onclick="switchImage('arm', false)">&#10094;</div>
-                    <div class="project-right-arrow clickable" onclick="switchImage('arm', true)">&#10095;</div>
-                    <div class="project-vertical-align"><img class="project-pictures" id="arm-picture"></div>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-left">
                     <div class="project-name">minigrad</div>
                     <div class="project-description">This project all started when I was lying in bed watching George Hotz make a PyTorch clone from scratch called tinygrad. I was so amazed that someone even has the courage to try to make a deep learning framework from scratch. So after watching his stream recording for a few days and reading hundreds of commit history, I decided I want to do the same, and that is how minigrad was born. Most people have no idea how the autograd engine works in modern deep learning frameworks, they just use it. Building minigrad forced me to truly understand how deep learning works under the hood and how creating a computation graph and using topological sort you could compute all the gradients in an efficient way. I also had to implement all the operations and optimizers from scratch which forced me to have a very good understanding of things like softmax, conv2d, batchnorm, Adam, etc. Of course I had to use my own library to train a few neural networks so I trained a CNN to classify MNIST digits, a LSTM to classify which language a last name is in, and an Attention model to translate dates into standardized format.<br><br><a href="https://github.com/JhihYangWu/minigrad" target="_blank">GitHub Repository</a></div>
                 </div>
@@ -47,6 +36,17 @@
                     <div class="project-left-arrow clickable" onclick="switchImage('minigrad', false)">&#10094;</div>
                     <div class="project-right-arrow clickable" onclick="switchImage('minigrad', true)">&#10095;</div>
                     <div class="project-vertical-align"><img class="project-pictures" id="minigrad-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">armCPUonFPGA</div>
+                    <div class="project-description">With the recent boom in generative AI and hardware acceleration, I became really interested in how chips are built. In armCPUonFPGA, I implement a 32-bit single-cycle ARMv4 CPU using the hardware description language Verilog and use it to program my FPGA (Tul Pynq-Z2). I wanted to understand how each component (carry lookahead adder, ALU, multiplier, MUX, etc) works in real life so I limited myself to only using logic gates and building up from there. I would love to turn my code into an actual chip and get it manufactured at a fab such as TSMC but since I don't have the money or knowledge, the only way to turn my code into hardware is using FPGA. This project combines the knowledge I learned in my computer architecture class and digital logic class while also giving me the chance to learn a more popular computer architecture. Check out my GitHub for more information about this project. (I wrote a super long README!)<br><br><a href="https://github.com/JhihYangWu/armCPUonFPGA" target="_blank">GitHub Repository</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('arm', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('arm', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="arm-picture"></div>
                 </div>
             </div>
             <div class="project">
