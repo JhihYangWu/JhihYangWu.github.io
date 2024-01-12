@@ -29,6 +29,17 @@
         <div id="projects">
             <div class="project">
                 <div class="project-left">
+                    <div class="project-name">KewlAI</div>
+                    <div class="project-description">In this project, I try to replicate a bunch of existing cool/kewl deep learning algorithms from scratch. I created this project because I wanted to know how these algorithms work under the hood instead of just using it through some API. So far I got neural style transfer, NeRF, and LLaMA (trained on wallstreetbets comments) to work, but there are many more to come!<br><br><a href="https://github.com/JhihYangWu/KewlAI" target="_blank">GitHub Repository</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('kewlai', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('kewlai', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="kewlai-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
                     <div class="project-name">minigrad</div>
                     <div class="project-description">This project all started when I was lying in bed watching George Hotz make a PyTorch clone from scratch called tinygrad. I was so amazed that someone even has the courage to try to make a deep learning framework from scratch. So after watching his stream recording for a few days and reading hundreds of commit history, I decided I want to do the same, and that is how minigrad was born. Most people have no idea how the autograd engine works in modern deep learning frameworks, they just use it. Building minigrad forced me to truly understand how deep learning works under the hood and how creating a computation graph and using topological sort you could compute all the gradients in an efficient way. I also had to implement all the operations and optimizers from scratch which forced me to have a very good understanding of things like softmax, conv2d, batchnorm, Adam, etc. Of course I had to use my own library to train a few neural networks so I trained a CNN to classify MNIST digits, a LSTM to classify which language a last name is in, and an Attention model to translate dates into standardized format.<br><br><a href="https://github.com/JhihYangWu/minigrad" target="_blank">GitHub Repository</a></div>
                 </div>

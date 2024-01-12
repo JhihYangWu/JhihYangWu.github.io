@@ -42,6 +42,7 @@ let numBookTankImages = 6
 let numMinigradImages = 4
 let numControllerImages = 11
 let numArmImages = 4
+let numKewlAIImages = 3
 
 let cryptoPictureIndex = 1
 let azaPictureIndex = 1
@@ -49,6 +50,7 @@ let booktankPictureIndex = 1
 let minigradPictureIndex = 1
 let controllerPictureIndex = 1
 let armPictureIndex = 1
+let kewlaiPictureIndex = 1
 
 $("crypto-picture").src = "images/crypto/1.png"
 $("aza-picture").src = "images/aza/1.png"
@@ -56,6 +58,7 @@ $("booktank-picture").src = "images/booktank/1.png"
 $("minigrad-picture").src = "images/minigrad/1.png"
 $("controller-picture").src = "images/controller/1.png"
 $("arm-picture").src = "images/arm/1.png"
+$("kewlai-picture").src = "images/kewlai/1.png"
 
 function switchImage(project, right) {
     if (project == "crypto") {
@@ -130,6 +133,18 @@ function switchImage(project, right) {
             armPictureIndex = numArmImages
         }
         $("arm-picture").src = `images/arm/${armPictureIndex}.png`
+    } else if (project == "kewlai") {
+        if (right) {
+            kewlaiPictureIndex++
+        } else {
+            kewlaiPictureIndex--
+        }
+        if (kewlaiPictureIndex > numKewlAIImages) {
+            kewlaiPictureIndex = 1
+        } else if (kewlaiPictureIndex < 1) {
+            kewlaiPictureIndex = numKewlAIImages
+        }
+        $("kewlai-picture").src = `images/kewlai/${kewlaiPictureIndex}.png`
     }
 }
 
