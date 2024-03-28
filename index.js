@@ -37,7 +37,7 @@ function switchPage(e) {
 }
 
 let numCryptoImages = 2
-let numAZAImages = 10
+let numAZAImages = 6
 let numBookTankImages = 6
 let numMinigradImages = 4
 let numControllerImages = 11
