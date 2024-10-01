@@ -1,0 +1,290 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    margin: 0px;
+    height: 100%;
+}
+
+#header{
+    height: 68px;
+    padding: 20px;
+}
+
+#header-name{
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+#header-nav{
+    float: right;
+    margin-top: 5px;
+}
+
+#header-nav span:not(:last-child){
+    margin-right: 40px;
+}
+
+#loader-overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+}
+
+#loader{
+    border: 2px solid #888;
+    border-top-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.clickable, input[type=button], input[type=submit]{
+    cursor: pointer;
+}
+
+#home, #contact{
+    width: 100%;
+    height: calc(100% - 68px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-center{
+    width: 50%;
+    text-align: center;
+}
+
+#profile-picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#profile-description, #profile-links{
+    margin-top: 20px;
+}
+
+#contact-center{
+    width: 300px;
+}
+
+#contact-title{
+    font-size: 40px;
+    text-align: center;
+}
+
+input, textarea{
+    display: block;
+    width: 100%;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+
+input[type=submit]{
+    width: 35%;
+    margin: auto;
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+}
+
+form :not(:last-child){
+    margin-bottom: 20px;
+}
+
+#projects{
+    width: 100%;
+    height: calc(100% - 68px);
+}
+
+.project{
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.project-name{
+    font-size: 40px;
+    padding: 20px;
+}
+
+.project-description{
+    overflow-y: scroll;
+    height: calc(100% - 150px);
+}
+
+.project-pictures{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project-vertical-align{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-left{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.project-right{
+    float: right;
+    width: 60%;
+    height: 100%;
+    padding: 40px;
+}
+
+.project-left-arrow, .project-right-arrow{
+    font-size: 40px;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    top: calc(50% - 20px);
+}
+
+.project-left-arrow{
+    left: -30px;
+}
+
+.project-right-arrow{
+    left: calc(100% + 10px);
+}
+
+#projects, #contact, #loader-overlay{
+    display: none;
+}
+
+@keyframes leftIn{
+    0%{
+        right: 100vw;
+        opacity: 0;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes leftOut{
+    0%{
+        right: 0;
+        opacity: 1;
+    }
+    100%{
+        right: 100vw;
+        opacity: 0;
+    }
+}
+
+@keyframes rightIn{
+    0%{
+        left: 100vw;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes rightOut{
+    0%{
+        left: 0;
+        opacity: 1;
+    }
+    100%{
+        left: 100vw;
+        opacity: 0;
+    }
+}
+
+#home, #projects, #contact{
+    position: absolute;
+}
+
+#contact-email{
+    position: absolute;
+    bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    #header-name{
+        display: block;
+        text-align: center;
+    }
+
+    #header-nav{
+        width: 100%;
+        text-align: center;
+    }
+
+    #home{
+        align-items: normal;
+        margin-top: 40px;
+    }
+
+    #home-center{
+        width: 90%;
+    }
+
+    .project{
+        width: 90%;
+        height: auto;
+    }
+
+    .project-name{
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .project-left{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-right{
+        float: none;
+        width: 100%;
+        height: 300px;
+        padding-top: 10px;
+    }
+}
