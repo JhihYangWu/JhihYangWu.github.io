@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JhihYang Wu's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-name">JHIHYANG WU</div>
+            <div id="header-nav">
+                <span onclick="switchPage(this)" data-page="home" class="clickable">HOME</span>
+                <span onclick="switchPage(this)" data-page="projects" class="clickable">PROJECTS</span>
+                <span onclick="switchPage(this)" data-page="contact" class="clickable">CONTACT</span>
+            </div>
+        </div>
+        <div id="home">
+            <div id="home-center">
+                <img id="profile-picture" src="images/Profile Picture.jpg">
+                <div id="profile-description">Hi! My name is JhihYang Wu and I am a senior at the University of Arizona studying Computer Science and Electrical & Computer Engineering. I was born in Taiwan, grew up in Shanghai, and currently living in the US. I am really interested in anything related to artificial intelligence and hope to one day contribute to the Big AI Dream of building robots as smart as humans. Recently, I also started getting interested in hardware acceleration and computer graphics. I love making friends so feel free to contact me about anything!</div>
+                <div id="profile-links">
+                    <a href="https://www.linkedin.com/in/jhihyang-wu/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/JhihYangWu" target="_blank">GitHub</a>
+                    <a href="JhihYang_Wu_Resume.pdf" target="_blank">Resume</a>
+                    <a style="text-decoration:underline; cursor:pointer" onclick="clickProjects()">My Projects</a>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">OptiZona</div>
+                    <div class="project-description">Optics simulation software coded from scratch using OpenGL and C++. For my senior design project with ASML involving use of a Shack–Hartmann wavefront sensor.</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('optizona', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('optizona', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="optizona-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">miniRT</div>
+                    <div class="project-description">Small but powerful ray tracer I built from scratch using just C++ and math. Supports quite a few features to generate realistic images and does so in a reasonable amount of rendering time.<br><br><a href="https://github.com/JhihYangWu/miniRT" target="_blank">GitHub Repository</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('minirt', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('minirt', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="minirt-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">minigrad</div>
+                    <div class="project-description">PyTorch clone coded from scratch in Python. Has an autograd engine so it supports both training and inference.<br><br><a href="https://github.com/JhihYangWu/minigrad" target="_blank">GitHub Repository</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('minigrad', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('minigrad', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="minigrad-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">C-- Compiler</div>
+                    <div class="project-description">A compiler coded in C that converts C-- code to MIPS assembly.<br><br>(GitHub repo is not public because it is UofA CSC 453 coursework)</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('cmm', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('cmm', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="cmm-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">HLS Compiler</div>
+                    <div class="project-description">A high-level synthesis tool coded in C++ that turns high level C-like code into optimized RTL code / Verilog. Uses the Force Directed Scheduling algorithm to minimize the number of resources used while meeting a time constraint.<br><br>(GitHub repo is not public because it is UofA ECE 474A/574A coursework)</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('hlsyn', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('hlsyn', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="hlsyn-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">MIPS CPU on FPGA</div>
+                    <div class="project-description">Five-stage pipelined datapath for the MIPS 32-bit ISA coded using Verilog. Works on Xilinx Artix-7 FPGA.<br><br>(GitHub repo is not public because it is UofA ECE 369A coursework)</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('mips', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('mips', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="mips-picture"></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-left">
+                    <div class="project-name">Arizona Autonomous</div>
+                    <div class="project-description">A club that I joined at University of Arizona that makes UAVs (unmanned aerial vehicles) to compete in the annual SUAS Competition. I was the CV (computer vision) lead from 2022-2023 but I also went to hardware meetings to help build the plane.</div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('aza', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('aza', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="aza-picture"></div>
+                </div>
+            </div>
+            <div class="project" style="display:none;">
+                <div class="project-left">
+                    <div class="project-name">BookTank</div>
+                    <div class="project-description">In my junior year of high school at the SMIC Private School in Shanghai, I worked with 2 of my classmates and built a full blown WeChat Mini Program for students and parents to buy and sell school textbooks more effectively. In the mini program, you could see what others have listed for sale and contact the seller with a push of a button. You could also upload pictures of your own books for sale on the platform. We even built a messaging system inside our mini program using WebSockets. As of September 2022, we have attracted more than 1900 users and have more than 1100 book listings of which more than 600 are successful transactions. One of the things that I am most proud of about this project is saving students who needed a textbook really urgenty for class but couldn’t find it anywhere else.<br><br><a href="images/BookTank QR Code.png" target="_blank">WeChat QR Code</a></div>
+                </div>
+                <div class="project-right">
+                    <div class="project-left-arrow clickable" onclick="switchImage('booktank', false)">&#10094;</div>
+                    <div class="project-right-arrow clickable" onclick="switchImage('booktank', true)">&#10095;</div>
+                    <div class="project-vertical-align"><img class="project-pictures" id="booktank-picture"></div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div id="contact-center">
+                <form id="contact-form" onsubmit="return submitMessage()">
+                    <div id="contact-title">CONTACT</div>
+                    <input type="text" placeholder="NAME" id="contact-form-name" spellcheck="false">
+                    <input type="email" placeholder="EMAIL" id="contact-form-email">
+                    <textarea placeholder="MESSAGE" id="contact-form-message" required></textarea>
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+            <div id="contact-email">or email me at jhihyang_wu å† outlook ∂ø† com</div>
+        </div>
+        <div id="loader-overlay">
+            <div id="loader"></div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
