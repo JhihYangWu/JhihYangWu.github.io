@@ -45,6 +45,7 @@ numImages = {
     "cmm": 2,
     "aza": 6,
     "optizona": 3,
+    "kewlai": 3,
 }
 
 imageIndices = {}
@@ -52,6 +53,9 @@ imageIndices = {}
 for (let key in numImages) {
     imageIndices[key] = 1
     $(`${key}-picture`).src = `images/${key}/${imageIndices[key]}.png`
+    if (key == "kewlai") {
+        $(`${key}-picture`).src = `images/${key}/${imageIndices[key]}.gif`
+    }
 }
 
 function switchImage(project, right) {
@@ -66,6 +70,9 @@ function switchImage(project, right) {
         imageIndices[project] = numImages[project]
     }
     $(`${project}-picture`).src = `images/${project}/${imageIndices[project]}.png`
+    if (project == "kewlai") {
+        $(`${project}-picture`).src = `images/${project}/${imageIndices[project]}.gif`
+    }
 }
 
 function post(msg) {
