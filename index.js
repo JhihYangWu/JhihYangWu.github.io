@@ -110,3 +110,99 @@ function clickProjects() {
 if (window.location.href.endsWith("#projects")) {
     clickProjects()
 }
+
+// === starfield background ===
+// coded by Grok
+
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+let shootingStars = [];
+
+// Set canvas size
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Star class
+class Star {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speed = Math.random() * 0.5 + 0.1;
+        this.opacity = Math.random() * 0.5 + 0.5;
+    }
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fill();
+    }
+    update() {
+        this.y += this.speed;
+        if (this.y > canvas.height) this.y = 0;
+        this.opacity = Math.random() * 0.5 + 0.5;
+    }
+}
+
+// Shooting Star class
+class ShootingStar {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = 0;
+        this.length = Math.random() * 50 + 20;
+        this.speedX = Math.random() * 5 - 2.5;
+        this.speedY = Math.random() * 5 + 2;
+        this.opacity = 1;
+    }
+    draw() {
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x - this.length * this.speedX / 5, this.y - this.length * this.speedY / 5);
+        ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    }
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.opacity -= 0.02;
+    }
+}
+
+// Initialize stars
+function initStars() {
+    stars = [];
+    for (let i = 0; i < 100; i++) {
+        stars.push(new Star());
+    }
+}
+
+// Animation loop
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+        star.update();
+        star.draw();
+    });
+    shootingStars = shootingStars.filter(star => star.opacity > 0);
+    shootingStars.forEach(star => {
+        star.update();
+        star.draw();
+    });
+    // Randomly add shooting stars
+    if (Math.random() < 0.01) {
+        shootingStars.push(new ShootingStar());
+    }
+    requestAnimationFrame(animate);
+}
+
+canvas.style.display = 'block';
+initStars();
+animate();
+
+// ============================
