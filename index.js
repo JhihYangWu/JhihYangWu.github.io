@@ -132,8 +132,8 @@ class Star {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speed = Math.random() * 0.5 + 0.1;
+        this.size = Math.random() * 1 + 0.5;
+        this.speed = Math.random() * 0.05 + 0.01;
         this.opacity = Math.random() * 0.5 + 0.5;
     }
     draw() {
@@ -195,7 +195,7 @@ function animate() {
         star.draw();
     });
     // Randomly add shooting stars
-    if (Math.random() < 0.01) {
+    if (Math.random() < 0.005) {
         shootingStars.push(new ShootingStar());
     }
     requestAnimationFrame(animate);
