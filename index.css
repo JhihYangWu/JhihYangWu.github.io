@@ -124,7 +124,7 @@ form :not(:last-child){
     margin-bottom: 20px;
 }
 
-#projects{
+#projects, #publications{
     width: 100%;
     height: calc(100% - 68px);
 }
@@ -136,9 +136,22 @@ form :not(:last-child){
     margin-bottom: 20px;
 }
 
+.publication{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
 .project-name{
     font-size: 40px;
     padding: 20px;
+}
+
+.publication-header{
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .project-description{
@@ -188,7 +201,7 @@ form :not(:last-child){
     left: calc(100% + 10px);
 }
 
-#projects, #contact, #loader-overlay{
+#projects, #publications, #contact, #loader-overlay{
     display: none;
 }
 
@@ -236,7 +249,7 @@ form :not(:last-child){
     }
 }
 
-#home, #projects, #contact{
+#home, #projects, #publications, #contact{
     position: absolute;
 }
 
@@ -265,7 +278,7 @@ form :not(:last-child){
         width: 90%;
     }
 
-    .project{
+    .project, .publication{
         width: 90%;
         height: auto;
     }

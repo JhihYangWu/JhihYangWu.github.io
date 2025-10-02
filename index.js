@@ -3,7 +3,7 @@ let $ = id => document.getElementById(id)
 let viewLoader = () => $("loader-overlay").style.display = "flex"
 let hideLoader = () => $("loader-overlay").style.display = "none"
 
-let pages = ["home", "projects", "contact"]
+let pages = ["home", "projects", "publications", "contact"]
 let pageViewed = "home"
 let switchingPages = false
 
