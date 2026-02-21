@@ -69,9 +69,12 @@ function switchImage(project, right) {
     } else if (imageIndices[project] < 1) {
         imageIndices[project] = numImages[project]
     }
-    $(`${project}-picture`).src = `images/${project}/${imageIndices[project]}.png`
+    let img = $(`${project}-picture`)
+    img.style.opacity = "0.3"
+    img.onload = () => img.style.opacity = "1"
+    img.src = `images/${project}/${imageIndices[project]}.png`
     if (project == "kewlai") {
-        $(`${project}-picture`).src = `images/${project}/${imageIndices[project]}.gif`
+        img.src = `images/${project}/${imageIndices[project]}.gif`
     }
 }
 
