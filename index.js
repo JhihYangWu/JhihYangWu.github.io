@@ -92,14 +92,15 @@ function submitMessage() {
 		action: "submitMessage"
 	};
 	["name", "email", "message"].forEach(attribute => msg[attribute] = $(`contact-form-${attribute}`).value)
-    setTimeout(() => {
-        post(msg).then(() => {
-            ["name", "email", "message"].forEach(attribute => $(`contact-form-${attribute}`).value = "")
-            hideLoader()
-        }).catch(() => {
-            hideLoader()
-        })
-    }, 500)
+    post(msg).then(() => {
+        ["name", "email", "message"].forEach(attribute => $(`contact-form-${attribute}`).value = "")
+        hideLoader()
+        let notification = $("success-notification")
+        notification.classList.add("show")
+        setTimeout(() => notification.classList.remove("show"), 5000)
+    }).catch(() => {
+        hideLoader()
+    })
     return false
 }
 

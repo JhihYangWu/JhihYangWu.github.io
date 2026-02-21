@@ -207,6 +207,28 @@ form :not(:last-child){
     display: none;
 }
 
+#success-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #2a2a2a;
+    color: white;
+    padding: 12px 24px;
+    border: 1px solid #555;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+#success-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 @keyframes leftIn{
     0%{
         right: 100vw;
