@@ -58,6 +58,14 @@ for (let key in numImages) {
     }
 }
 
+// Preload all project images so arrow clicks are instant
+for (let key in numImages) {
+    for (let i = 1; i <= numImages[key]; i++) {
+        let preload = new Image()
+        preload.src = `images/${key}/${i}.${key == "kewlai" ? "gif" : "png"}`
+    }
+}
+
 function switchImage(project, right) {
     if (right) {
         imageIndices[project]++
