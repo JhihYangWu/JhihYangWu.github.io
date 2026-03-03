@@ -78,12 +78,12 @@ function switchImage(project, right) {
         imageIndices[project] = numImages[project]
     }
     let img = $(`${project}-picture`)
-    img.style.opacity = "0.3"
-    img.onload = () => img.style.opacity = "1"
-    img.src = `images/${project}/${imageIndices[project]}.png`
-    if (project == "kewlai") {
-        img.src = `images/${project}/${imageIndices[project]}.gif`
-    }
+    let ext = project == "kewlai" ? "gif" : "png"
+    img.style.opacity = "0"
+    setTimeout(() => {
+        img.onload = () => img.style.opacity = "1"
+        img.src = `images/${project}/${imageIndices[project]}.${ext}`
+    }, 200)
 }
 
 function post(msg) {
