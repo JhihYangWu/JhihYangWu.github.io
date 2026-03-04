@@ -164,7 +164,7 @@ form :not(:last-child){
 .project-pictures{
     max-width: 100%;
     max-height: 100%;
-    transition: opacity 0.2s ease;
+
 }
 
 .project-vertical-align{

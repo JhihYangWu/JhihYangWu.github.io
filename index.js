@@ -79,11 +79,7 @@ function switchImage(project, right) {
     }
     let img = $(`${project}-picture`)
     let ext = project == "kewlai" ? "gif" : "png"
-    img.style.opacity = "0"
-    setTimeout(() => {
-        img.onload = () => img.style.opacity = "1"
-        img.src = `images/${project}/${imageIndices[project]}.${ext}`
-    }, 200)
+    img.src = `images/${project}/${imageIndices[project]}.${ext}`
 }
 
 function post(msg) {
