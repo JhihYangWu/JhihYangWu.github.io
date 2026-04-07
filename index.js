@@ -1,4 +1,4 @@
-let backend = "http://132.226.89.252"
+let backend = "https://jhihyangwu.duckdns.org"
 let $ = id => document.getElementById(id)
 let viewLoader = () => $("loader-overlay").style.display = "flex"
 let hideLoader = () => $("loader-overlay").style.display = "none"
