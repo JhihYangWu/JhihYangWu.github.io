@@ -1,4 +1,4 @@
-let backend = "https://jhihyang.pythonanywhere.com"
+let backend = "http://132.226.89.252"
 let $ = id => document.getElementById(id)
 let viewLoader = () => $("loader-overlay").style.display = "flex"
 let hideLoader = () => $("loader-overlay").style.display = "none"
