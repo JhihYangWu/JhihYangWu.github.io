@@ -107,6 +107,9 @@ function submitMessage() {
         setTimeout(() => notification.classList.remove("show"), 5000)
     }).catch(() => {
         hideLoader()
+        let notification = $("error-notification")
+        notification.classList.add("show")
+        setTimeout(() => notification.classList.remove("show"), 5000)
     })
     return false
 }
