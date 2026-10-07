@@ -46,6 +46,7 @@ numImages = {
     "aza": 6,
     "optizona": 3,
     "kewlai": 4,
+    "parallaxpro": 3,
 }
 
 imageIndices = {}
